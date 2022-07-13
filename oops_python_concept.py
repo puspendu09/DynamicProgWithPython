@@ -59,7 +59,7 @@ class Item:  # this is class
 # item4 = Item("mouse", 50, 5)
 # item5 = Item("keyboard", 75, 5)
 
-# Item.instantiate_from_csv()
+# Item.instantate_from_csv()
 # print(Item.all)
 
 print(Item.is_integer(7.0))
