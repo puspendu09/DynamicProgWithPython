@@ -10,6 +10,9 @@ from collections import deque
 #             return True
 #
 #     return False
+
+
+# breadth first approach
 queue = deque()
 
 
@@ -37,4 +40,4 @@ graph = {
     'f': []
 }
 
-print(has_path(graph, 'b', 'f'))
+print(has_path(graph, 'b', 'd'))
