@@ -3,7 +3,9 @@
 # to implement this we need dictionary in python;
 
 
-def fib(n, memo={}):
+def fib(n, memo=None):
+    if memo is None:
+        memo = {}
     if n in memo.keys():
         return memo[n]
     if n <= 2:
@@ -18,4 +20,3 @@ def fib(n, memo={}):
 print('fib(n)', fib(7))
 # print('fib(n)', fib(4))
 # print('fib(n)', fib(50))
-
