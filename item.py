@@ -77,7 +77,7 @@ class Item:  # this is class
         pass
 
     def send_mail(self):
-        print("mail sent")
+        print(f"mail sent{self.name}")
 
     def __repr__(self):  # __repr__ means represent. It's used to convert object to a readable format
         return f"{self.__class__.__name__}('{self.name}', {self.__price}, {self.qty} )"
