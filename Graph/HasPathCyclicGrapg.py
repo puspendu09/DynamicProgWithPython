@@ -33,6 +33,7 @@ def buildGraph(input_edges):
             graph[b] = []
         graph[a].append(b)
         graph[b].append(a)
+
     return graph
 
 
