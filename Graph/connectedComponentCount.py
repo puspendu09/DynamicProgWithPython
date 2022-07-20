@@ -1,35 +1,33 @@
 count = 0
-visited_node = ()
+visit_node = ()
+# graph = {'a': ['b'],
+#          'b': ['a'],
+#          'c': [],
+#          'd': []}
+graph = {
+    'a': ['b', 'c'],
+    'b': ['d'],
+    'c': ['e'],
+    'd': ['f'],
+    'e': [],
+    'f': []
+}
 
 
-def connectedGraph(input_graph):
-    for node in input_graph:
-        print(node)
-        return_value = hasPath(input_graph, node)
-        if not return_value:
-            global count
-            count = count + 1
-
-
-def hasPath(input_graph, src):
-    # print(src)
-    global visited_node
-    if src in visited_node:
+def explore_graph(test_graph, start_node):
+    global visit_node
+    if start_node in visit_node:
         return False
-    visited_node = visited_node + tuple(src)
-    for neighbour in input_graph:
-        hasPath(input_graph, neighbour)
+    else:
+        visit_node = visit_node + tuple(start_node)
 
+    for neighbour in test_graph[start_node]:
+        explore_graph(test_graph, neighbour)
     return True
 
 
-graph = {
-    'a': ['b'],
-    'b': ['a'],
-    'c': []
+for node in graph:
+    if explore_graph(graph, node):
+        count = count + 1
 
-}
-
-connectedGraph(graph)
-print(visited_node)
 print(count)
