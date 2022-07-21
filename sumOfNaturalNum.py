@@ -5,4 +5,4 @@ def sumOfNaturalNum(number):
         return number + sumOfNaturalNum(number - 1)
 
 
-print(sumOfNaturalNum(100))
+print(sumOfNaturalNum(5000))

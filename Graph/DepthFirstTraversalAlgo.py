@@ -24,4 +24,4 @@ def depth_first(input_graph, source):
         depth_first(input_graph, neighbour)
 
 
-depth_first(graph, 'a')
+depth_first(graph,'a')

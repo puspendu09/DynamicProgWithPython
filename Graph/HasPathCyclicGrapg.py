@@ -1,17 +1,18 @@
+
 def undirectedPath(input_edges, nodeA, nodeB, is_visited=None):
     graph = buildGraph(input_edges)
     if is_visited is None:
         is_visited = ()
+
     return hasPath(graph, nodeA, nodeB, is_visited)
 
 
 def hasPath(inputGraph, src, tgt, is_visited):
-    print(is_visited)
+    # print(is_visited)
     if src == tgt:
         return True
 
     if src in is_visited:
-        print("loop in this graph ", is_visited)
         return False
     is_visited = is_visited + tuple(src)
 

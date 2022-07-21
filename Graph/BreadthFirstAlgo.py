@@ -1,5 +1,6 @@
 from collections import deque
-#code for breadth first algo traversal
+
+# code for breadth first algo traversal
 queue = deque()
 graph = {
     'a': ['b', 'c'],
