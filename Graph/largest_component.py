@@ -20,7 +20,7 @@ def largest_component(graph):
     return largest
 
 
-def explore(node, graph):
+def explore(node, input_graph):
     global visited_node
     if node in visited_node:
         return 0
@@ -28,10 +28,11 @@ def explore(node, graph):
         visited_node = visited_node + tuple(node)
 
     size = 1
-    for neighbour in graph[node]:
-        size = size + explore(neighbour, graph)
+    for neighbour in input_graph[node]:
+        size = size + explore(neighbour, input_graph)
 
     return size
+
 
 
 print(largest_component(graph))
