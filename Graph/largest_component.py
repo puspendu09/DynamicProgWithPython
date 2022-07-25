@@ -12,6 +12,7 @@ graph = {
 
 
 def largest_component(graph):
+
     largest = 0
     for node in graph:
         size = explore(node, graph)

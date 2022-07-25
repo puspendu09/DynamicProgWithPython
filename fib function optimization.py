@@ -1,22 +1,11 @@
-# memoization
-# key=> fib(n) value=>return value
-# to implement this we need dictionary in python;
+def fib(n):
+    if n == 0 or n == 1:
+        return n
+    x = fib(n - 1)
+    y = fib(n - 2)
+    return x + y
 
 
-def fib(n, memo=None):
-    if memo is None:
-        memo = {}
-    if n in memo.keys():
-        return memo[n]
-    if n <= 2:
-        return 1
-    else:
-        memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
-        # print(memo)
-        return memo[n]
+print(fib(10))
 
-
-# print('fib(n)', fib(2))
-print('fib(n)', fib(7))
-# print('fib(n)', fib(4))
-# print('fib(n)', fib(50))
+# 1,1,2
