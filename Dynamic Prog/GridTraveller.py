@@ -1,9 +1,8 @@
-
-
-def gridTraveler(m, n, memo={}):
-
+def gridTraveler(m, n, memo=None):
     # memo checking
     # are the args in the memo
+    if memo is None:
+        memo = {}
     key = str(m) + ',' + str(n)
     if key in memo.keys():
         return memo[key]
@@ -17,7 +16,6 @@ def gridTraveler(m, n, memo={}):
     # recursion of function actual call of the  function
     memo[key] = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo)
     return memo[key]
-
 
 
 print(gridTraveler(1, 1))
