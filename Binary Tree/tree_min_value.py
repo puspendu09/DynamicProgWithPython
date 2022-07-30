@@ -74,5 +74,14 @@ c.right = f
 #
 #     return smallest
 
+# recursive method
+def treeMinValue(root: Node):
+    if root is None:
+        return inf
+    left_min = treeMinValue(root.left)
+    right_min = treeMinValue(root.right)
 
-print(treeMinValue(None))
+    return min(root.val, left_min, right_min)
+
+
+print(treeMinValue(a))
